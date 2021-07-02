@@ -2,10 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+{% include 'head.html' %}
 </head>
 <body>
 {% include 'menu.html' %}
 <h1>Lista zadań</h1>
+<table border="1">
+    <tr><th>Numer</th><th>Nazwa</th><th>Priorytet</th></tr>
+    {% for t in todos %}
+        <tr><td>{{ t.todo_id }}</td><td>{{ t.todo_name }}</td><td>{{ t.todo_priority }}</td></tr>
+    {% endfor %}
+</table>
 </body>
 </html>

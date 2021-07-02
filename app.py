@@ -1,5 +1,5 @@
 from flask import Flask,render_template
-from dao import get_author
+from dao import *
 
 app = Flask(__name__)
 
@@ -10,7 +10,7 @@ def index():
 
 @app.route('/list')
 def list():
-    return render_template("list.html")
+    return render_template("list.html",todos=get_todos())
 
 @app.route('/about')
 def about():
