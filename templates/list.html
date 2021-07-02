@@ -2,15 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-{% include 'head.html' %}
+    {% include 'head.html' %}
 </head>
 <body>
 {% include 'menu.html' %}
 <h1>Lista zadań</h1>
 <table border="1">
-    <tr><th>Numer</th><th>Nazwa</th><th>Priorytet</th></tr>
+    <tr>
+        <th>Numer</th>
+        <th>Nazwa</th>
+        <th>Akcje</th>
+    </tr>
     {% for t in todos %}
-        <tr><td>{{ t.todo_id }}</td><td>{{ t.todo_name }}</td><td>{{ t.todo_priority }}</td></tr>
+        <tr>
+            <td>{{ t.todo_id }}</td>
+            <td>
+                {% if t.todo_priority==1 %}
+                    <font color="green">
+                {% elif t.todo_priority==2 %}
+                    <font color="orange">
+                {% elif t.todo_priority==3 %}
+                    <font color="red">
+                {% endif %}
+                <b>
+                    {{ t.todo_name }}
+                </b>
+                </font>
+            </td>
+            <td>---</td>
+        </tr>
     {% endfor %}
 </table>
 </body>
