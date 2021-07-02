@@ -32,7 +32,7 @@ def add_todo_post():
     opis=request.form['opis']
     priorytet=request.form['priorytet']
     t=ToDo(None,nazwa,opis,priorytet)
-    print(nazwa,opis,priorytet)
+    save_todo(t)
     return redirect('/list')
 
 if __name__ == '__main__':
