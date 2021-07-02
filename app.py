@@ -16,5 +16,9 @@ def list():
 def about():
     return render_template("about.html",author=get_author())
 
+@app.route('/todo_details')
+def todo_details():
+    return render_template("todo_details.html")
+
 if __name__ == '__main__':
     app.run(debug=True,port=8000)
