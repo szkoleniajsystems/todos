@@ -22,5 +22,9 @@ def todo_details():
     print(f'id={id}')
     return render_template("todo_details.html",todo=get_todo(id))
 
+@app.route('/add_todo')
+def add_todo():
+    return render_template("add_todo.html")
+
 if __name__ == '__main__':
     app.run(debug=True,port=8000)
