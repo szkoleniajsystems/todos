@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+{% include 'menu.html' %}
+<h1>O programie</h1>
+<table border="1">
+    <tr>
+        <th>Imię</th>
+        <td>{{ author.first_name }}</td>
+    </tr>
+    <tr>
+        <th>Nazwisko</th>
+        <td>{{ author.last_name }}</td>
+    </tr>
+    <tr>
+        <th>Email</th>
+        <td>{{ author.email }}</td>
+    </tr>
+    <tr>
+        <th>Zdjęcie</th>
+        <td>  <img src="{{ author.pic_url }}"/>  </td>
+    </tr>
+</table>
+</body>
+</html>
