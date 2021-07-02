@@ -7,5 +7,13 @@
 <body>
 {% include 'menu.html' %}
 <h1>Dodawanie zadania</h1>
+<form method="post">
+    <table border="1">
+        <tr><th>Nazwa zadania</th><td><input type="text" name="nazwa"/></td></tr>
+        <tr><th>Opis zadania</th><td><textarea cols="40" rows="20" name="opis"></textarea></td></tr>
+        <tr><th>Priorytet zadania</th><td><input type="text" name="priorytet"/></td></tr>
+    </table>
+    <input type="submit" value="Zapisz"/>
+</form>
 </body>
 </html>
