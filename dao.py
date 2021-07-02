@@ -8,5 +8,5 @@ def get_todos():
     wynik=[]
     wynik.append(ToDo(1,'Kopsnąć się po piwo','Piątek, piąteczek, piątunio',3)  )
     wynik.append(ToDo(2, 'Zamówić pizzę', 'Piątek, piąteczek, piątunio', 2))
-    wynik.append(ToDo(2, 'Otworzyć Whiskey', 'Piątek, piąteczek, piątunio', 1))
+    wynik.append(ToDo(3, 'Otworzyć Whiskey', 'Piątek, piąteczek, piątunio', 1))
     return wynik
