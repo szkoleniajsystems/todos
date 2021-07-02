@@ -1,4 +1,4 @@
-from flask import Flask,render_template,request
+from flask import Flask,render_template,request,redirect
 from dao import *
 
 app = Flask(__name__)
@@ -25,6 +25,15 @@ def todo_details():
 @app.route('/add_todo')
 def add_todo():
     return render_template("add_todo.html")
+
+@app.route('/add_todo',methods=['POST'])
+def add_todo_post():
+    nazwa=request.form['nazwa']
+    opis=request.form['opis']
+    priorytet=request.form['priorytet']
+    t=ToDo(None,nazwa,opis,priorytet)
+    print(nazwa,opis,priorytet)
+    return redirect('/list')
 
 if __name__ == '__main__':
     app.run(debug=True,port=8000)
