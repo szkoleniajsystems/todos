@@ -7,5 +7,11 @@
 <body>
 {% include 'menu.html' %}
 <h1>Szczegóły zadania</h1>
+<table border="1">
+    <tr><th>Id zadania</th><td>{{ todo.todo_id }}</td></tr>
+    <tr><th>Nazwa zadania</th><td>{{ todo.todo_name }}</td></tr>
+    <tr><th>Opis zadania</th><td>{{ todo.todo_description }}</td></tr>
+    <tr><th>Priorytet</th><td>{{ todo.todo_priority }}</td></tr>
+</table>
 </body>
 </html>

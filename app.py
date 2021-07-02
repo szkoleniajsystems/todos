@@ -20,7 +20,7 @@ def about():
 def todo_details():
     id=request.args.get('id')
     print(f'id={id}')
-    return render_template("todo_details.html")
+    return render_template("todo_details.html",todo=get_todo(id))
 
 if __name__ == '__main__':
     app.run(debug=True,port=8000)
