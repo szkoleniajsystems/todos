@@ -1,4 +1,4 @@
-from flask import Flask,render_template
+from flask import Flask,render_template,request
 from dao import *
 
 app = Flask(__name__)
@@ -18,6 +18,8 @@ def about():
 
 @app.route('/todo_details')
 def todo_details():
+    id=request.args.get('id')
+    print(f'id={id}')
     return render_template("todo_details.html")
 
 if __name__ == '__main__':

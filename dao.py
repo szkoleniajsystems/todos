@@ -10,3 +10,5 @@ def get_todos():
     wynik.append(ToDo(2, 'Zamówić pizzę', 'Piątek, piąteczek, piątunio', 2))
     wynik.append(ToDo(3, 'Otworzyć Whiskey', 'Piątek, piąteczek, piątunio', 1))
     return wynik
+
+#obiadówka do 13:37
